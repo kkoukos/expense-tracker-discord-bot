@@ -195,7 +195,7 @@ function formatConfirmation(
     ? `\n> 📝 ${parsed.items.slice(0, 4).join(", ")}${parsed.items.length > 4 ? "…" : ""}`
     : "";
 
-  return `✅ **Logged!** \`${docId}\`\n${emoji} **${parsed.category}**${merchant}\n💶 **${parsed.amount.toFixed(2)} ${parsed.currency ?? "EUR"}**${items}`;
+  return `✅ **Logged!** \`${docId}\`\n${emoji} **${parsed.category}**${merchant}\n💶 **${Number(parsed.amount).toFixed(2)} ${parsed.currency ?? "EUR"}**${items}`;
 }
 
 // ── Message handler ──────────────────────────────────────────────────────────
